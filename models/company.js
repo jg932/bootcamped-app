@@ -13,7 +13,7 @@ const companySchema = new Schema({
     required: true
   },
   website: {
-    type: URL,
+    type: String,
   },
   structure: {
     type: String
