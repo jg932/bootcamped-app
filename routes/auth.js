@@ -9,4 +9,5 @@ router.post('/login', authCtrl.login)
 
 /*---------- Protected Routes ----------*/
 
+
 export { router }
