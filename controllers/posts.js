@@ -27,7 +27,7 @@ const index = async (req, res) => {
       .sort({ createdAt: 'desc' })
     return res.status(200).json(posts)
   } catch (error) {
-    return res.status(500).json(error)
+    return res.status(500).json(error)     
   }
 }
 
