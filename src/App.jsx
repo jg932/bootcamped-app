@@ -5,7 +5,12 @@ import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Companies from './pages/Companies/Companies'
+import CompanyForm from './pages/Companies/CompanyForm'
+import CompanyDetail from './pages/Companies/CompanyDetail'
 import Listings from './pages/Listings/Listings'
+import ListingForm from './pages/Listings/ListingForm'
+import ListingDetail from './pages/Listings/ListingDetail'
+
 // import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
 
@@ -44,9 +49,25 @@ const App = () => {
           path="/companies"
           element={<Companies />}
         />
-         <Route
+        <Route
+          path="/companies/create"
+          element={<CompanyForm />}
+        />
+        <Route
+          path="/companies/:id"
+          element={<CompanyDetail />}
+        />
+        <Route
           path="/listings"
           element={<Listings />}
+        />
+        <Route
+          path="/listings/create"
+          element={<ListingForm />}
+        />
+        <Route
+          path="/listings/:id"
+          element={<ListingDetail />}
         />
       </Routes>
     </>
