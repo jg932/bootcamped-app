@@ -58,10 +58,31 @@ const update = async (req, res) => {
 
 const deleteCompany = async (req, res) => {
   console.log('deleting a company');
+  try {
+    await Company.findByIdAndDelete(req.params.id)
+    const profile = await Profile.findById(req.user.profile)
+    profile.companies.remove({ _id: req.params.id })
+    await profile.save()
+    return res.status(204).end()
+  } catch (error) {
+    return res.status(500).json(error)
+  }
 }
 
 const createContact = async (req, res) => {
   console.log("creating contact")
+  try {
+    req.body.contacter = req.user.profile
+    const company = await Company.findById(req.params.id)
+    company.contacts.push(req.body)
+    await company.save()
+    const newContact = company.contacts[company.contacts.length - 1]
+    const profile = await Profile.findById(req.user.profile)
+    newContact.contacter = profile
+    return res.status(201).json(newContact)
+  } catch (error) {
+    return res.status(500).json(error)
+  }
 }
 
 const deleteContact = async (req, res) => {
