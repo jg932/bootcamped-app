@@ -1,9 +1,16 @@
 import { Company } from '../models/company.js'
 
 
-function create (req, res) {
+const create = async (req, res) => {
  console.log('creating companies'); 
 }
+
+
+const update = async (req, res) => {
+  console.log('this function is updating')
+}
+
+
 
 
 
@@ -11,4 +18,5 @@ function create (req, res) {
 
 export {
  create,
+ update,
 }
