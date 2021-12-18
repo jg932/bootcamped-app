@@ -87,14 +87,42 @@ const createContact = async (req, res) => {
 
 const deleteContact = async (req, res) => {
   console.log('deleting a company');
+  try {
+    const company = await Company.findById(req.params.companyId)
+    company.contacts.remove({ _id: req.params.contactId })
+    await company.save()
+    return res.status(204).end()
+  } catch (error) {
+    return res.status(500).json(error)
+  }
 }
 
 const createInterview = async (req, res) => {
   console.log("creating interview")
+  try {
+    req.body.interviewer = req.user.profile
+    const company = await Company.findById(req.params.id)
+    company.interviews.push(req.body)
+    await company.save()
+    const newInterview = company.interviews[company.interviews.length - 1]
+    const profile = await Profile.findById(req.user.profile)
+    newInterview.interviewer = profile
+    return res.status(201).json(newInterview)
+  } catch (error) {
+    return res.status(500).json(error)
+  }
 }
 
 const deleteInterview = async (req, res) => {
   console.log('deleting a company');
+  try {
+    const company = await Company.findById(req.params.companyId)
+    company.interviews.remove({ _id: req.params.interviewId })
+    await company.save()
+    return res.status(204).end()
+  } catch (error) {
+    return res.status(500).json(error)
+  }
 }
 
 
