@@ -4,7 +4,6 @@ import { Company } from '../models/company.js'
 
 const create = async (req, res) => {
  console.log('creating companies')
-
  try {
    req.body.added_by = req.user.profile
    const company = await new Company(req.body)
@@ -36,9 +35,21 @@ const deleteCompany = async (req, res) => {
   console.log('deleting a company');
 }
 
+const createContact = async (req, res) => {
+  console.log("creating contact")
+}
 
+const deleteContact = async (req, res) => {
+  console.log('deleting a company');
+}
 
+const createInterview = async (req, res) => {
+  console.log("creating interview")
+}
 
+const deleteInterview = async (req, res) => {
+  console.log('deleting a company');
+}
 
 
 export {
@@ -46,5 +57,9 @@ export {
  index,
  show,
  update,
- deleteCompany as delete
+ deleteCompany as delete,
+ createContact,
+ deleteContact,
+ createInterview,
+ deleteInterview
 }
