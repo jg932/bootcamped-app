@@ -4,6 +4,8 @@ import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
+import Companies from './pages/Companies/Companies'
+import Listings from './pages/Listings/Listings'
 // import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
 
@@ -40,9 +42,11 @@ const App = () => {
         /> */}
         <Route
           path="/companies"
+          element={<Companies />}
         />
          <Route
           path="/listings"
+          element={<Listings />}
         />
       </Routes>
     </>
