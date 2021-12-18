@@ -33,10 +33,27 @@ const index = async (req, res) => {
 
 const show = async (req, res) => {
   console.log('showing detail page')
+  try {
+    const companies = await Company.findById(req.params.id)
+      .populate("added_by")
+    return res.status(200).json(companies)
+  } catch (error) {
+    return res.status(500).json(error)
+  }
 }
 
 const update = async (req, res) => {
   console.log('updating data')
+  try {
+    const updatedCompany = await Company.findByIdAndUpdate(
+      req.params.id,
+      { new: true}
+    ).populate("added_by")
+    return res.status(200).json(updatedCompany)
+  } catch (error) {
+    return res.status(500).json(error)
+  }
+
 }
 
 const deleteCompany = async (req, res) => {
