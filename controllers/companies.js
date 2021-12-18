@@ -4,6 +4,7 @@ import { Company } from '../models/company.js'
 
 const create = async (req, res) => {
  console.log('creating companies')
+
  try {
    req.body.added_by = req.user.profile
    const company = await new Company(req.body)
@@ -18,11 +19,22 @@ const create = async (req, res) => {
  }
 }
 
-
-const update = async (req, res) => {
-  console.log('this function is updating')
+const index = async (req, res) => {
+  console.log('indexing')
 }
 
+
+const show = async (req, res) => {
+  console.log('showing detail page')
+}
+
+const update = async (req, res) => {
+  console.log('updating data')
+}
+
+const deleteCompany = async (req, res) => {
+  console.log('deleting a company');
+}
 
 
 
@@ -31,5 +43,8 @@ const update = async (req, res) => {
 
 export {
  create,
+ index,
+ show,
  update,
+ deleteCompany as delete
 }
