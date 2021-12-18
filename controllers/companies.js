@@ -20,6 +20,14 @@ const create = async (req, res) => {
 
 const index = async (req, res) => {
   console.log('indexing')
+  try {
+    const companies = await Company.find({})
+      .populate("added_by")
+      .sort({ createdAt: "desc"})
+    return res.status(200).json(companies)
+  } catch (error) {
+    return res.status(500).json(error)
+  }
 }
 
 
