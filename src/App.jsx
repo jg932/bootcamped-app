@@ -8,6 +8,8 @@ import Companies from './pages/Companies/Companies'
 import CompanyForm from './pages/Companies/CompanyForm'
 import CompanyDetail from './pages/Companies/CompanyDetail'
 import Listings from './pages/Listings/Listings'
+import ListingForm from './pages/Listings/ListingForm'
+import ListingDetail from './pages/Listings/ListingDetail'
 
 // import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
@@ -58,6 +60,14 @@ const App = () => {
         <Route
           path="/listings"
           element={<Listings />}
+        />
+        <Route
+          path="/listings/create"
+          element={<ListingForm />}
+        />
+        <Route
+          path="/listings/:id"
+          element={<ListingDetail />}
         />
       </Routes>
     </>
