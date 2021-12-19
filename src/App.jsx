@@ -5,7 +5,7 @@ import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Companies from './pages/Companies/Companies'
-import CompanyForm from './pages/Companies/CompanyForm'
+import CreateCompany from './pages/Companies/CreateCompany'
 import CompanyDetail from './pages/Companies/CompanyDetail'
 import Listings from './pages/Listings/Listings'
 import ListingForm from './pages/Listings/ListingForm'
@@ -51,7 +51,7 @@ const App = () => {
         />
         <Route
           path="/companies/create"
-          element={<CompanyForm />}
+          element={<CreateCompany />}
         />
         <Route
           path="/companies/:id"
