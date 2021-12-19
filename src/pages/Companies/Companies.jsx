@@ -1,13 +1,22 @@
+import React, { useState } from 'react'
 import styles from './Companies.module.css'
 import { Link } from 'react-router-dom'
 import CompanyCard from './CompanyCard'
+import Header from '../../components/Header'
 
-const Companies = () => {
+const Companies = (props) => {
+  const [companies, setCompanies] = useState([])
   return (
-    <>
-      <h1>[Companies Index here]</h1>
-      <Link to="/companies/create">Add a Company</Link>
-    </>
+    <div className="layout">
+      <Header title="All Companies" />
+      {companies?.map((company) => (
+        <CompanyCard
+          company={company}
+          key={company._id}
+          user={props.user}
+        />
+      ))}
+    </div>
   )
 }
 
