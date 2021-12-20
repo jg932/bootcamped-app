@@ -1,11 +1,34 @@
+import React, { useState, useEffect } from 'react'
 import styles from './Companies.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import Contact from './Contact'
 import HiringInfo from './HiringInfo'
+import Header from '../../components/Header'
+import * as companyService from '../../services/companyService'
 
-const CompanyDetail = () => {
+const CompanyDetail = (props) => {
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const [company, setCompany] = useState()
+
+  useEffect(() => {
+    const fetchCompany = async () => {
+      try {
+        const companyData = await companyService.getCompanyById(id)
+        console.log('Company Details Data:', companyData)
+        setCompany(companyData)
+      } catch (error) {
+        throw error
+      }
+    }
+    fetchCompany()
+  }, [id])
+
+  console.log(props)
   return (
-    <h1>[Company Detail here]</h1>
+    <div className="layout">
+      <Header title={`${props.user.name}`} />
+    </div>
   )
 }
 
