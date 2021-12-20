@@ -12,7 +12,6 @@ export const getAllCompanies = async () => {
 }
 
 export const createCompany = async (company) => {
-  console.log('creating!')
   try {
     const res = await fetch(BASE_URL, {
       method: 'POST',

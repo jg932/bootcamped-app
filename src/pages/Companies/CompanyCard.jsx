@@ -1,11 +1,13 @@
+import React from 'react'
 import styles from './Companies.module.css'
-import { Link } from 'react-router-dom'
 
-const CompanyCard = () => {
+const CompanyCard = (props) => {
   return (
-    <>
-      <h2>[Company Card here]</h2>
-    </>
+   <div className="company-card">
+     <div className="card-header">
+       {props.company.name}
+     </div>
+   </div>
   )
 }
 
