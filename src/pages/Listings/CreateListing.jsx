@@ -12,18 +12,18 @@ import { useNavigate } from 'react-router'
 
 const CreateListing = (props) => {
   const navigate = useNavigate()
-  const [listing, setListing] = useState('')
+  const [name, setName] = useState('')
   const [jobTitle, setJobTitle] = useState('')
   const [description, setDescription] = useState('')
 
   const formData = {
-    listing: listing,
+    name: name,
     jobTitle: jobTitle,
     description: description,
     user: props.user
   }
 
-  const handleCreatePost = async (event) => {
+  const handleCreateListing = async (event) => {
     event.preventDefault()
     try {
       const newListing = await createListing(formData)
@@ -34,8 +34,19 @@ const CreateListing = (props) => {
   }
   return (
     <div className="layout">
-      <Header />
-      <ListingForm />
+      <Header title="Add a Job Post"/>
+      <ListingForm 
+        name={name}
+        setName={setName}
+
+        jobTitle={jobTitle}
+        setJobTitle={setJobTitle}
+        
+        description={description}
+        setDescription={setDescription}
+
+        handleCreateListing={handleCreateListing}
+      />
     </div>
   )
 }
