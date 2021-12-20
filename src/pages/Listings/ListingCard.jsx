@@ -1,7 +1,6 @@
 import styles from './Listings.module.css'
 
 import { Link } from 'react-router-dom'
-import ListingActions from './ListingActions'
 
 
 const ListingCard = (props) => {
@@ -9,7 +8,9 @@ const ListingCard = (props) => {
     <div className="listing-card">
       <div className="card-header">
         {props.listing.name}
-        <ListingActions {...props}/>
+        <button
+          onClick={() => props.handleDeleteListing(props.post._id)}
+        >Delete</button>
       </div>
     </div>
   )

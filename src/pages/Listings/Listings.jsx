@@ -36,6 +36,7 @@ const Listing = () => {
         <ListingCard
           listings={listings}
           key={listings._id}
+          handleDeletePost={handleDeletePost}
         />
         ))}
       </div>
