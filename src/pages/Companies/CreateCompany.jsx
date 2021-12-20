@@ -21,6 +21,8 @@ const CreateCompany = (props) => {
     user: props.user
   }
 
+  console.log(name, location)
+
   const handleCreateCompany = async (e) => {
     e.preventDefault()
     try {
