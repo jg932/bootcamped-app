@@ -23,7 +23,7 @@ const index = async (req, res) => {
 
   try {
     const posts = await Post.find({})
-      .populate('added_by')
+      .populate('user')
       .sort({ createdAt: 'desc' })
     return res.status(200).json(posts)
   } catch (error) {
@@ -37,7 +37,7 @@ const show = async (req, res) => {
 
   try {
     const post = await Post.findById(req.params.id)
-    .populate('added_by')
+    .populate('user')
     return res.status(200).json(post)
   } catch (error) {
     return res.status(500).json(error)
