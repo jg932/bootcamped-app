@@ -23,11 +23,9 @@ const CompanyDetail = (props) => {
     }
     fetchCompany()
   }, [id])
-
-  console.log(props)
   return (
     <div className="layout">
-      <Header title={`${props.user.name}`} />
+      <Header title={`${company.name}`} />
     </div>
   )
 }

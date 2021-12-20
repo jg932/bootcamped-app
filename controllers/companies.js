@@ -22,7 +22,6 @@ const index = async (req, res) => {
   console.log('indexing')
   try {
     const companies = await Company.find({})
-      .populate("user")
       .sort({ createdAt: "desc"})
     return res.status(200).json(companies)
   } catch (error) {
@@ -35,7 +34,6 @@ const show = async (req, res) => {
   console.log('showing detail page')
   try {
     const companies = await Company.findById(req.params.id)
-      .populate("added_by")
     return res.status(200).json(companies)
   } catch (error) {
     return res.status(500).json(error)
