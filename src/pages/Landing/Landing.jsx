@@ -11,7 +11,12 @@ const Landing = () => {
   return (
     <div className="landing-page">
       <div className="landing-elements">
-        <img className="logo-splash" src={Logo} alt="bootcamped logo"></img>
+        <img 
+        className="logo-splash" 
+        src={Logo} 
+        alt="bootcamped logo"
+        height="320px"
+        ></img>
         <lottie-player
           autoplay
           loop
