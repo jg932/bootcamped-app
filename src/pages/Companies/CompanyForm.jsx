@@ -30,6 +30,20 @@ const CompanyForm = (props) => {
       value={props.location}
       onChange={(e) => props.setLocation(e.target.value)}
     />
+
+    <div className="border"/>
+
+    <div className="website-prompt">
+      <label>Website</label>
+    </div>
+    <input
+      type="text"
+      name="website"
+      autoComplete='off'
+      placeholder='URL'
+      value={props.website}
+      onChange={(e) => props.setWebsite(e.target.value)}
+    />
    </form>
   )
 }
