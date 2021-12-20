@@ -22,11 +22,7 @@ const index = async (req, res) => {
   console.log('indexing')
   try {
     const companies = await Company.find({})
-add_.env
-      .populate("added_by")
-
       .populate("user")
- main
       .sort({ createdAt: "desc"})
     return res.status(200).json(companies)
   } catch (error) {
@@ -39,11 +35,7 @@ const show = async (req, res) => {
   console.log('showing detail page')
   try {
     const companies = await Company.findById(req.params.id)
- add_.env
-      .populate("added_by")
-
       .populate("user")
-main
     return res.status(200).json(companies)
   } catch (error) {
     return res.status(500).json(error)
