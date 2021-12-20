@@ -6,11 +6,10 @@ import HiringInfo from './HiringInfo'
 import Header from '../../components/Header'
 import * as companyService from '../../services/companyService'
 
-const CompanyDetail = (props) => {
+const CompanyDetail = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [company, setCompany] = useState()
-
   useEffect(() => {
     const fetchCompany = async () => {
       try {
@@ -25,7 +24,7 @@ const CompanyDetail = (props) => {
   }, [id])
   return (
     <div className="layout">
-      <Header title={`${company.name}`} />
+      <Header title={`${company?.name}`} />
     </div>
   )
 }
