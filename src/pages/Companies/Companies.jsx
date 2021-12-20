@@ -3,6 +3,7 @@ import styles from './Companies.module.css'
 import CompanyCard from './CompanyCard'
 import Header from '../../components/Header'
 import { getAllCompanies, updateCompany, deleteCompany } from '../../services/companyService'
+import { Link } from 'react-router-dom'
 
 const Companies = (props) => {
   const [companies, setCompanies] = useState([])
@@ -20,22 +21,22 @@ const Companies = (props) => {
     const fetchAllCompanies = async () => {
       const companyData = await getAllCompanies()
       setCompanies(companyData)
-      console.log(companyData)
     }
     fetchAllCompanies()
     return () => { setCompanies([]) }
   }, [])
-  console.log(companies)
+  
   return (
     <div className="layout">
       <Header title="All Companies" />
+      <Link to="/companies/create">Add a Company</Link>
       {companies?.map((company) => (
-        <CompanyCard
-          company={company}
-          key={company._id}
-          user={props.user}
-          handleDeleteCompany={handleDeleteCompany}
-        />
+          <CompanyCard
+            company={company}
+            key={company._id}
+            user={props.user}
+            handleDeleteCompany={handleDeleteCompany}
+          />
       ))}
     </div>
   )
