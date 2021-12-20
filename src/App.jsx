@@ -51,7 +51,7 @@ const App = () => {
         />
         <Route
           path="/companies/create"
-          element={<CreateCompany user={user}/>}
+          element={user ? <CreateCompany user={user} /> : <Navigate to="/signin" />}
         />
         <Route
           path="/companies/:id"
@@ -59,11 +59,11 @@ const App = () => {
         />
         <Route
           path="/listings"
-          element={<Listings />}
+          element={<Listings user={user} />}
         />
         <Route
           path="/listings/create"
-          element={<ListingForm />}
+          element={<ListingForm user={user} />}
         />
         <Route
           path="/listings/:id"

@@ -1,15 +1,47 @@
 import styles from './Listings.module.css'
-import { Link } from 'react-router-dom'
-import ListingCard from './ListingCard'
 
-const Listings = () => {
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+
+import Header from '../../components/Header.jsx'
+import ListingCard from './ListingCard'
+import { getAllPosts, deletePost } from '../../services/listingService'
+import { PromiseProvider } from 'mongoose'
+
+const Listing = () => {
+  const [listings, setListings] = useState([])
+
+  const handleDeletePost = async (postId) => {
+    try {
+      await deletePost(postId)
+      setListings(listings.filter((post) => post._id !== postId))
+    } catch (error) {
+      throw error
+    }
+  }
+
+  useEffect(() => {
+    const fetchAllPosts = async () => {
+      const postData = await getAllPosts()
+    } 
+    fetchAllPosts()
+  }, [])
+
   return (
     <>
-      <h1>[Job Listings here]</h1>
-      <Link to="/listings/create">Create new listing</Link>
+      <div className="layout">
+        <Header />
+        <Link to="/listings/create">Create new listing</Link>
+        {listings?.map((listings) => (
+        <ListingCard
+          listings={listings}
+          key={listings._id}
+          handleDeletePost={handleDeletePost}
+        />
+        ))}
+      </div>
     </>
-    
   )
 }
 
-export default Listings
+export default Listing
