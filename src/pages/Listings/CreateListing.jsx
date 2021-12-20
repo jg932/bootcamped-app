@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Listings.module.css'
 
 //Components
@@ -12,8 +12,16 @@ import { useNavigate } from 'react-router'
 
 const CreateListing = (props) => {
   const navigate = useNavigate()
-  
-  const 
+  const [listing, setListing] = useState('')
+  const [jobTitle, setJobTitle] = useState('')
+  const [description, setDescription] = useState('')
+
+  const formData = {
+    listing: listing,
+    jobTitle: jobTitle,
+    description: description,
+    user: props.user
+  }
 
   const handleCreatePost = async (event) => {
     event.preventDefault()
