@@ -47,11 +47,11 @@ const App = () => {
         /> */}
         <Route
           path="/companies"
-          element={<Companies />}
+          element={<Companies user={user}/>}
         />
         <Route
           path="/companies/create"
-          element={<CreateCompany />}
+          element={<CreateCompany user={user}/>}
         />
         <Route
           path="/companies/:id"
