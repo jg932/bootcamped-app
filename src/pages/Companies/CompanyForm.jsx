@@ -44,6 +44,24 @@ const CompanyForm = (props) => {
       value={props.website}
       onChange={(e) => props.setWebsite(e.target.value)}
     />
+
+    <div className="border"/>
+
+    <div className="structure-prompt">
+      <label>Structure</label>
+    </div>
+    <input
+      type="text"
+      name="structure"
+      autoComplete='off'
+      placeholder='Structure'
+      value={props.structure}
+      onChange={(e) => props.setStructure(e.target.value)}
+    />
+    
+    <div className="border"></div>
+
+    <button type="submit">Submit</button>
    </form>
   )
 }

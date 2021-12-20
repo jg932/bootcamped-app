@@ -1,5 +1,5 @@
 import * as tokenService from './tokenService'
-const BASE_URL = 'api/companies'
+const BASE_URL = '/api/companies/'
 
 export const getAllCompanies = async () => {
   try {
@@ -12,6 +12,7 @@ export const getAllCompanies = async () => {
 }
 
 export const createCompany = async (company) => {
+  console.log('creating!')
   try {
     const res = await fetch(BASE_URL, {
       method: 'POST',
