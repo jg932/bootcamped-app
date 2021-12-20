@@ -28,3 +28,14 @@ export const createListing = async (listing) => {
     throw error
   }
 }
+
+export const deleteListing = async (postId) => {
+  try {
+    await fetch(`${BASE_URL}${postId}`, {
+      method: "DELETE",
+      headers: { 'Authorization': 'Bearer ' + tokenService.getToken()}
+    })
+  } catch (error) {
+    throw error
+  }
+}

@@ -5,10 +5,20 @@ import { Link } from 'react-router-dom'
 
 import Header from '../../components/Header.jsx'
 import ListingCard from './ListingCard'
-import { getAllPosts } from '../../services/listingService'
+import { getAllPosts, deletePost } from '../../services/listingService'
+import { PromiseProvider } from 'mongoose'
 
-const Listings = () => {
+const Listing = () => {
   const [listings, setListings] = useState([])
+
+  const handleDeletePost = async (postId) => {
+    try {
+      await deletePost(postId)
+      setListings(listings.filter((post) => post._id !== postId))
+    } catch (error) {
+      throw error
+    }
+  }
 
   useEffect(() => {
     const fetchAllPosts = async () => {
@@ -22,10 +32,15 @@ const Listings = () => {
       <div className="layout">
         <Header />
         <Link to="/listings/create">Create new listing</Link>
-        
+        {listings?.map((listings) => (
+        <ListingCard
+          listings={listings}
+          key={listings._id}
+        />
+        ))}
       </div>
     </>
   )
 }
 
-export default Listings
+export default Listing

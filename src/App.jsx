@@ -59,11 +59,11 @@ const App = () => {
         />
         <Route
           path="/listings"
-          element={<Listings />}
+          element={<Listings user={user} />}
         />
         <Route
           path="/listings/create"
-          element={<ListingForm />}
+          element={<ListingForm user={user} />}
         />
         <Route
           path="/listings/:id"
