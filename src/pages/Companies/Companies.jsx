@@ -29,14 +29,14 @@ const Companies = (props) => {
   return (
     <div className="layout">
       <Header title="All Companies" />
-      {/* {companies?.map((company) => (
+      {companies?.map((company) => (
         <CompanyCard
           company={company}
           key={company._id}
           user={props.user}
           handleDeleteCompany={handleDeleteCompany}
         />
-      ))} */}
+      ))}
     </div>
   )
 }
