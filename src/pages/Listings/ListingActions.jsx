@@ -22,9 +22,9 @@ const PostActions = (props) => {
 
   return (
     <div className="interactions">
-      <button
+      {/* <button
         onClick={() => props.updateListing(props.post._id)}
-      >Update</button>
+      >Update</button> */}
       <button
         onClick={() => props.deletePost(props.post._id)}
       >Delete</button>

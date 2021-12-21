@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/Header.jsx'
 import ListingCard from './ListingCard'
 import { getAllPosts, updateListing, deleteListing } from '../../services/listingService'
-import { PromiseProvider } from 'mongoose'
+// import { PromiseProvider } from 'mongoose'
 
 const Listing = (props) => {
   const [listings, setListings] = useState([])
@@ -20,13 +20,13 @@ const Listing = (props) => {
     }
   }
 
-  const handleUpdateListing = async (postId) => {
-    try {
+  // const handleUpdateListing = async (postId) => {
+  //   try {
 
-    } catch (error) {
-      throw error
-    }
-  }
+  //   } catch (error) {
+  //     throw error
+  //   }
+  // }
 
   useEffect(() => {
     const fetchAllPosts = async () => {
@@ -47,7 +47,7 @@ const Listing = (props) => {
           listings={listings}
           key={listings._id}
           user={props.user}
-          handleUpdateListing={handleUpdateListing}
+          // handleUpdateListing={handleUpdateListing}
           handleDeletePost={handleDeletePost}
 
         />
