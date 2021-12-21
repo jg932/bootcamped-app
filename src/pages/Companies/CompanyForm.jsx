@@ -34,13 +34,13 @@ const CompanyForm = (props) => {
     <div className="border"/>
 
     <div className="website-prompt">
-      <label>Website</label>
+      <label>Website URL</label>
     </div>
     <input
       type="text"
       name="website"
       autoComplete='off'
-      placeholder='URL'
+      placeholder='http://...'
       value={props.website}
       onChange={(e) => props.setWebsite(e.target.value)}
     />
