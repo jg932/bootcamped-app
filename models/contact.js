@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 
-const contactSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const contactSchema = new Schema({
   name: { 
     type: String,
     required: true
@@ -17,7 +19,8 @@ const contactSchema = new mongoose.Schema({
   gaGrad: {
     type: Boolean,
     default: false
-  }
+  },
+  user:{type: Schema.Types.ObjectId, ref:"User"}
 })
 
 const Contact = mongoose.model('Contact', contactSchema)
