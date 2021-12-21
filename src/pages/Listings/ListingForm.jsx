@@ -33,7 +33,6 @@ const ListingForm = (props) => {
         />
         <button type="submit">Submit</button>
       </form>
-      <Link to="/listings">Back</Link>
     </>
   )
 }

@@ -67,7 +67,7 @@ const App = () => {
         />
         <Route
           path="/listings/:id"
-          element={<ListingDetail />}
+          element={<ListingDetail user={user}/>}
         />
       </Routes>
     </>

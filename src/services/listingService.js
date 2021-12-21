@@ -1,5 +1,4 @@
 import * as tokenService from './tokenService'
-
 const BASE_URL = '/api/posts/'
 
 export const getAllPosts = async () => {
@@ -15,7 +14,7 @@ export const getAllPosts = async () => {
 export const createListing = async (listing) => {
   try {
     const res = await fetch(BASE_URL, {
-      method: "POST",
+      method: 'POST',
       headers: {
         'content-type': 'application/json',
         'Authorization': `Bearer ${tokenService.getToken()}`
@@ -27,7 +26,7 @@ export const createListing = async (listing) => {
   } catch (error) {
     throw error
   }
-}
+}  
 
 export const updateListing = async (postId) => {
   try {

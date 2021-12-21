@@ -25,6 +25,18 @@ const ListingDetail = () => {
   return (
     <div className="layout">
       <Header title={`${listing?.name}`} />
+      <div className="border"/>
+      <div className="listing-details">
+        <div className="listing-name">
+          {listing?.name}
+        </div>
+        <div className="jobTitle">
+          {listing?.jobTitle}
+        </div>
+        <div className="listing-description">
+          {listing?.description}
+        </div>
+      </div>
     </div>
   )
 }

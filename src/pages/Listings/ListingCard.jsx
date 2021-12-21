@@ -1,7 +1,7 @@
 import styles from './Listings.module.css'
 
 import { Link } from 'react-router-dom'
-import * as ListingActions from './ListingActions'
+import * as PostActions from './ListingActions'
 
 
 const ListingCard = (props) => {
@@ -9,7 +9,7 @@ const ListingCard = (props) => {
     <div className="listing-card">
       <div className="card-header">
         {props.listing.name}
-        <ListingActions {...props} />
+        {/* <PostActions {...props}/> */}
       </div>
     </div>
   )
