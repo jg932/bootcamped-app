@@ -53,7 +53,6 @@ const update = async (req, res) => {
   } catch (error) {
     return res.status(500).json(error)
   }
-
 }
 
 const deleteCompany = async (req, res) => {
