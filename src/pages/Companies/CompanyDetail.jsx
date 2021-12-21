@@ -22,11 +22,21 @@ const CompanyDetail = () => {
     }
     fetchCompany()
   }, [id])
+  console.log(company?.website)
   return (
     <div className="layout">
       <Header title={`${company?.name}`} />
+      <div className="border"/>
       <div className="company-details">
-        {/* basic details here */}
+        <div className='location'>
+         {company?.location}
+        </div>
+        <div className='website'>
+         <a href={`${company?.website}`} target='_blank' rel='noreferrer'>{company?.website}</a>
+        </div>
+        <div className='structure'>
+          <label>Info: <p>{company?.structure}</p></label>
+        </div>
       </div>
 
       <div className="interviews">
