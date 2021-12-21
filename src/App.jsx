@@ -55,7 +55,7 @@ const App = () => {
         />
         <Route
           path="/companies/:id"
-          element={<CompanyDetail />}
+          element={<CompanyDetail user={user}/>}
         />
         <Route
           path="/listings"

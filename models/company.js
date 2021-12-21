@@ -18,7 +18,9 @@ const companySchema = new Schema({
   structure: {
     type: String
   },
-  user:[{type: Schema.Types.ObjectId, ref:"User"}]
+  user:{type: Schema.Types.ObjectId, ref:"User"},
+  contacts: [{type: Schema.Types.ObjectId, ref:"Contact"}],
+  interview: {type: Schema.Types.ObjectId, ref:"Interview"}
 }, { timestamps: true })
 
 
