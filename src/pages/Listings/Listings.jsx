@@ -1,4 +1,4 @@
-import styles from './Listings.module.css'
+import './Listings.module.css'
 
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'

@@ -55,3 +55,13 @@ export const deleteListing = async (postId) => {
     throw error
   }
 }
+
+export const getListingById = async (listingId) => {
+  try {
+    const res = await fetch(`${BASE_URL}${listingId}`)
+    const data = await res.json()
+    return data
+  } catch (error) {
+    throw error
+  }
+}
