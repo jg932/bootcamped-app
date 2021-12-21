@@ -25,6 +25,18 @@ const CompanyDetail = () => {
   return (
     <div className="layout">
       <Header title={`${company?.name}`} />
+      <div className="company-details">
+        {/* basic details here */}
+      </div>
+
+      <div className="interviews">
+        {/* interview process display here */}
+        {/* add interview form here, probably with an if statement to display it? */}
+      </div>
+
+      <div className="contacts">
+        {/* contact display and form here */}
+      </div>
     </div>
   )
 }
