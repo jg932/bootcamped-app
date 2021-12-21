@@ -10,7 +10,7 @@ import { PromiseProvider } from 'mongoose'
 
 const Listing = () => {
   const [listings, setListings] = useState([])
-
+  console.log(Listing)
   const handleDeletePost = async (postId) => {
     try {
       await handleDeletePost(postId)
