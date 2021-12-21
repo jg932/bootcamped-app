@@ -1,12 +1,13 @@
-import styles from './Listings.module.css'
+// import styles from './Listings.module.css'
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const ListingForm = (props) => {
-  return (
-    <>
-      <form className="create-form" onSubmit={props.handleCreateListing}>
+  return (      
+    <form className="create-form" onSubmit={props.handleCreateListing}>
+      <div>
         <label>Enter Job Post Info</label>
+      </div>
+      <div>  
         <input
           required
           autoComplete="off"
@@ -15,6 +16,8 @@ const ListingForm = (props) => {
           value={props.name}
           onChange={(event) => props.setName(event.target.value)}
         />
+        </div>
+        <div>
         <input
           required
           autoComplete="off"
@@ -23,6 +26,8 @@ const ListingForm = (props) => {
           value={props.jobTitle}
           onChange={(event) => props.setJobTitle(event.target.value)}
         />
+        </div>
+        <div>
         <input
           required
           autoComplete="off"
@@ -31,10 +36,10 @@ const ListingForm = (props) => {
           value={props.description}
           onChange={(event) => props.setDescription(event.target.value)}
         />
+        </div>
+        <div> </div>
         <button type="submit">Submit</button>
-      </form>
-      <Link to="/listings">Back</Link>
-    </>
+    </form>
   )
 }
 

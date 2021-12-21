@@ -8,7 +8,7 @@ import ListingCard from './ListingCard'
 import { getAllPosts, updateListing, deleteListing } from '../../services/listingService'
 import { PromiseProvider } from 'mongoose'
 
-const Listing = () => {
+const Listing = (props) => {
   const [listings, setListings] = useState([])
 
   const handleDeletePost = async (postId) => {
@@ -20,11 +20,21 @@ const Listing = () => {
     }
   }
 
+  const handleUpdateListing = async (postId) => {
+    try {
+
+    } catch (error) {
+      throw error
+    }
+  }
+
   useEffect(() => {
     const fetchAllPosts = async () => {
-      const postData = await getAllPosts()
+      const listingData = await getAllPosts()
+      setListings(listingData)
     } 
     fetchAllPosts()
+    return () => { setListings([]) }
   }, [])
 
   return (
@@ -36,7 +46,8 @@ const Listing = () => {
         <ListingCard
           listings={listings}
           key={listings._id}
-          user={PromiseProvider.user}
+          user={props.user}
+          handleUpdateListing={handleUpdateListing}
           handleDeletePost={handleDeletePost}
 
         />

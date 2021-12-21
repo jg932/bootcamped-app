@@ -20,7 +20,7 @@ const CreateListing = (props) => {
     name: name,
     jobTitle: jobTitle,
     description: description,
-    user: props.user
+    createdBy: props.user
   }
 
   const handleCreateListing = async (event) => {
@@ -44,7 +44,7 @@ const CreateListing = (props) => {
         
         description={description}
         setDescription={setDescription}
-
+        
         handleCreateListing={handleCreateListing}
       />
     </div>
