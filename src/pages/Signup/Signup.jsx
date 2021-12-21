@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import SignupForm from '../../components/SignupForm/SignupForm'
-import styles from './Signup.module.css'
+import './Signup.module.css'
+
 
 const Signup = props => {
   const [message, setMessage] = useState([''])
@@ -10,7 +11,8 @@ const Signup = props => {
   }
 
   return (
-    <div className="signup page">
+    <div className="signup-page">
+
       <div className="left-container">
 
         <div className="form-container">
@@ -18,9 +20,15 @@ const Signup = props => {
             <h1>Sign Up</h1>
             <p>{message}</p>
           </div>  
-            <SignupForm className="register-form" {...props} updateMessage={updateMessage} />
+          <SignupForm className="register-form" {...props} updateMessage={updateMessage} />
         </div>
+
       </div>
+      
+      <div className="right-container"> 
+        We can add an animation here if we want
+      </div>
+
     </div>
   )
 }
