@@ -10,11 +10,18 @@ const Signup = props => {
   }
 
   return (
-    <main className={styles.container}>
-      <h1>Sign Up</h1>
-      <p>{message}</p>
-      <SignupForm {...props} updateMessage={updateMessage} />
-    </main>
+    <div className="signup page">
+      <div className="left-container">
+
+        <div className="form-container">
+          <div className="title-container">
+            <h1>Sign Up</h1>
+            <p>{message}</p>
+          </div>  
+            <SignupForm className="register-form" {...props} updateMessage={updateMessage} />
+        </div>
+      </div>
+    </div>
   )
 }
 
