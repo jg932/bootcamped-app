@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import SignupForm from '../../components/SignupForm/SignupForm'
 import './Signup.module.css'
+import Animation from '../../components/misc/Animation'
+import coder from '../../assets/animation/coder.json'
 
 
 const Signup = props => {
@@ -20,13 +22,13 @@ const Signup = props => {
             <h1>Sign Up</h1>
             <p>{message}</p>
           </div>  
-          <SignupForm className="register-form" {...props} updateMessage={updateMessage} />
+          <SignupForm className="form-container" {...props} updateMessage={updateMessage} />
         </div>
 
       </div>
-      
+
       <div className="right-container"> 
-        We can add an animation here if we want
+      <Animation animData={coder}></Animation>
       </div>
 
     </div>
