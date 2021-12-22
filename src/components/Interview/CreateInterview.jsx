@@ -18,7 +18,7 @@ const CreateInterview = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await props.handleCreateContact(formData)
+    await props.handleCreateInterview(formData)
     props.setToggleNew(false)
   }
 
@@ -76,6 +76,8 @@ const CreateInterview = (props) => {
         value={techInterview}
         onChange={(e) => setTechInterview(e.target.value)}
       />
+
+      <button type="submit" className="">Submit</button>
     </form>
   )
 }

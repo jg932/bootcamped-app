@@ -5,7 +5,7 @@ import InterviewCard from "./InterviewCard"
 const InterviewList = (props) => {
   return (
     <div>
-      {props?.company?.interview?.map((interview) => (
+      {props?.company?.interviews?.map((interview) => (
         <InterviewCard
           {...props}
           key={interview._id}

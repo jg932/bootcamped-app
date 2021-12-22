@@ -100,15 +100,13 @@ const deleteContact = async (req, res) => {
 const createInterview = async (req, res) => {
   console.log("creating interview")
   try {
-    req.body.interviewer = req.user.profile
-    const company = await Company.findById(req.params.id)
+    req.body.added_by = req.user.profile
+    const company = await Company.findById(req.params.id).populate("user")
     company.interviews.push(req.body)
     await company.save()
-    const newInterview = company.interviews[company.interviews.length - 1]
-    const profile = await Profile.findById(req.user.profile)
-    newInterview.interviewer = profile
-    return res.status(201).json(newInterview)
+    return res.status(201).json(company)
   } catch (error) {
+    console.log(error)
     return res.status(500).json(error)
   }
 }

@@ -64,7 +64,7 @@ const companySchema = new Schema({
   },
   user:{type: Schema.Types.ObjectId, ref:"User"},
   contacts: [contactSchema],
-  interview: [interviewSchema]
+  interviews: [interviewSchema]
 }, { timestamps: true })
 
 

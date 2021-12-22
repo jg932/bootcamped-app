@@ -10,8 +10,8 @@ const InterviewComponent = (props) => {
 
   const handleCreateInterview = async (formData) => {
     try {
-      const updatedCompany = await 
-      props.handleUpdatedCompany(updatedCompany)
+      const updatedCompany = await companyService.createInterview(props.company._id, formData)
+      props.handleUpdateCompany(updatedCompany)
     } catch (error) {
       throw error
     }
