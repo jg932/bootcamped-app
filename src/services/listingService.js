@@ -1,3 +1,4 @@
+import { json } from 'express'
 import * as tokenService from './tokenService'
 const BASE_URL = '/api/posts/'
 
@@ -28,7 +29,7 @@ export const createListing = async (listing) => {
   }
 }  
 
-export const updateListing = async (postId) => {
+export const updateListing = async (postId, updatedPost) => {
   try {
     const res = await fetch(`${BASE_URL}${postId}`, {
       method: "PUT",
@@ -36,6 +37,7 @@ export const updateListing = async (postId) => {
         'content-type': 'application/json',
         'Authorization': 'Bearer ' + tokenService.getToken()
       },
+      // body:JSON.stringify(updatedPost)
     })
     const data = await res.json()
     return data

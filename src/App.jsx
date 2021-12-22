@@ -10,6 +10,8 @@ import CompanyDetail from './pages/Companies/CompanyDetail'
 import Listings from './pages/Listings/Listings'
 import CreateListing from './pages/Listings/CreateListing'
 import ListingDetail from './pages/Listings/ListingDetail' 
+import EditListing from './pages/Listings/EditListing'
+
 
 // import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
@@ -78,6 +80,10 @@ const App = () => {
         <Route
           path="/listings/:id"
           element={<ListingDetail user={user} handleDeletePost={handleDeletePost} />}
+        />
+        <Route
+          path="/listings/:id/edit"
+          element={<EditListing user={user} />}
         />
       </Routes>
     </>

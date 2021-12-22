@@ -1,7 +1,6 @@
-import styles from './Listings.module.css'
+import './Listings.module.css'
 
 import { Link } from 'react-router-dom'
-import * as ListingActions from './ListingActions'
 
 
 const ListingCard = (props) => {

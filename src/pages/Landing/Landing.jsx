@@ -4,7 +4,7 @@ import * as LottiePlayer from "@lottiefiles/lottie-player";
 import "../../styles/Landing.css"
 
 //Assets
-import Logo from '../../assets/images/bootcamped img.jpeg'
+// import Logo from '../../assets/images/bootcamped img.jpeg'
 
 
 const Landing = ({user}) => {
@@ -14,7 +14,7 @@ const Landing = ({user}) => {
       <div className="landing-elements">
         <img 
         className="logo-splash" 
-        src={Logo} 
+        // src={Logo} 
         alt="bootcamped logo"
         height="320px"
         ></img>
