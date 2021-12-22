@@ -1,14 +1,25 @@
 import styles from './Listings.module.css'
 import React, {useState, useEffect } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 import Header from '../../components/Header'
 import * as listingService from '../../services/listingService'
+import ListingActions from './ListingActions'
 
-const ListingDetail = () => {
+const ListingDetail = (props) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [listing, setListing] = useState()
+  
+  const handleDeletePost = async (postId) => {
+    try {
+      await listingService.deleteListing(postId)
+      navigate("/listings")
+    } catch (error) {
+      throw error
+    }
+  }
+
   useEffect(() => {
     const fetchListing = async () => {
       try {
@@ -34,6 +45,9 @@ const ListingDetail = () => {
         </div>
         <div className="listing-description">
           {listing?.description}
+        </div>
+        <div className="listing-edit">
+          <ListingActions handleDeletePost={handleDeletePost} listing={listing} />
         </div>
       </div>
     </div>

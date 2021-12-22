@@ -1,15 +1,15 @@
 import React from 'react'
 // import '../../styles/Card.css'
 
-const PostActions = (props) => {
+const ListingActions = (props) => {
   console.log(props)
   return (
     <div className="interactions">
       <button
-        onClick={() => props.handleDeletePost(props.post._id)}
+        onClick={() => props.handleDeletePost(props.listing._id)}
       >Delete</button>
     </div>
   )
 }
 
-export default PostActions
+export default ListingActions

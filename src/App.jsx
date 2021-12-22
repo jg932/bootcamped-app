@@ -9,13 +9,14 @@ import CreateCompany from './pages/Companies/CreateCompany'
 import CompanyDetail from './pages/Companies/CompanyDetail'
 import Listings from './pages/Listings/Listings'
 import CreateListing from './pages/Listings/CreateListing'
-import ListingDetail from './pages/Listings/ListingDetail'
+import ListingDetail from './pages/Listings/ListingDetail' 
 
 // import Profiles from './pages/Profiles/Profiles'
 import * as authService from './services/authService'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [listings, setListings] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -26,6 +27,15 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleDeletePost = async (postId) => {
+    try {
+      await handleDeletePost(postId)
+      setListings(listings.filter((post) => post._id !== postId))
+    } catch (error) {
+      throw error
+    }
   }
 
   return (
@@ -63,11 +73,11 @@ const App = () => {
         />
         <Route
           path="/listings/create"
-          element={<CreateListing user={user} />}
+          element={<CreateListing user={user}  />}
         />
         <Route
           path="/listings/:id"
-          element={<ListingDetail user={user}/>}
+          element={<ListingDetail user={user} handleDeletePost={handleDeletePost} />}
         />
       </Routes>
     </>
