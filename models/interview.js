@@ -1,25 +1,27 @@
-import mongoose from 'mongoose'
+// import mongoose from 'mongoose'
 
-const Schema = mongoose.Schema
+// const Schema = mongoose.Schema
 
-const interviewSchema = new Schema({
-  interviewer:{
-    type: String
-  },
-  communication:{
-    type: String
-  },
-  vibe:{
-    type: String
-  },
-  tip:{
-    type: String
-  },
-  techInterview:{
-    type: String
-  }
-})
+// const interviewSchema = new Schema({
+//   interviewer:{
+//     type: String
+//   },
+//   communication:{
+//     type: String
+//   },
+//   vibe:{
+//     type: String
+//   },
+//   tip:{
+//     type: String
+//   },
+//   techInterview:{
+//     type: String
+//   }
+// },
+//   {timestamps: true }
+// )
 
-const Interview = mongoose.model('Interview', interviewSchema)
+// const Interview = mongoose.model('Interview', interviewSchema)
 
-export { Interview }
+// export { Interview }
