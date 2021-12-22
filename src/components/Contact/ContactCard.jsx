@@ -1,8 +1,6 @@
 import React from 'react'
 import "../../styles/Card.css"
 
-import ContactDelete from './ContactDelete'
-
 const ContactCard = (props) => {
   return (
     <>
