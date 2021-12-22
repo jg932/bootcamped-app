@@ -4,7 +4,7 @@ import * as LottiePlayer from "@lottiefiles/lottie-player";
 import "../../styles/Landing.css"
 
 //Assets
-import Logo from '../../assets/images/logo.jpeg'
+import Logo from '../../assets/images/bootcamped img.jpeg'
 
 
 const Landing = ({user}) => {
