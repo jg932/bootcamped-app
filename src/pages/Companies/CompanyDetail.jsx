@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import HiringInfo from './HiringInfo'
 import Header from '../../components/Header'
 import * as companyService from '../../services/companyService'
 import ContactsCompoment from '../../components/Contact/ContactsComponent'

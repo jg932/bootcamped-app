@@ -1,6 +1,7 @@
 import styles from './Listings.module.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "../../styles/Create.css"
 
 const ListingForm = (props) => {
   return (
