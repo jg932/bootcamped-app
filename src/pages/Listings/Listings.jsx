@@ -10,15 +10,6 @@ import { getAllPosts, updateListing, deleteListing } from '../../services/listin
 const Listing = (props) => {
   const [listings, setListings] = useState([])
 
-  const handleDeletePost = async (postId) => {
-    try {
-      await handleDeletePost(postId)
-      setListings(listings.filter((post) => post._id !== postId))
-    } catch (error) {
-      throw error
-    }
-  }
-
   useEffect(() => {
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
@@ -40,7 +31,7 @@ const Listing = (props) => {
           listing={listing}
           key={listing._id}
           user={props.user}
-          handleDeletePost={handleDeletePost}
+          // handleDeletePost={handleDeletePost}
         />
       ))}
       </div>
