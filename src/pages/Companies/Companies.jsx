@@ -3,10 +3,12 @@ import styles from './Companies.module.css'
 import CompanyCard from './CompanyCard'
 import Header from '../../components/Header'
 import { getAllCompanies, updateCompany, deleteCompany } from '../../services/companyService'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import * as companyService from '../../services/companyService'
 
 const Companies = (props) => {
   const [companies, setCompanies] = useState([])
+  const navigate = useNavigate()
 
   const handleDeleteCompany = async (companyId) => {
     try {
@@ -17,7 +19,7 @@ const Companies = (props) => {
     }
   }
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchAllCompanies = async () => {
       const companyData = await getAllCompanies()
       setCompanies(companyData)
