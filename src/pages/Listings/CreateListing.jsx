@@ -27,7 +27,7 @@ const CreateListing = (props) => {
     event.preventDefault()
     try {
       const newListing = await createListing(formData)
-      navigate('/posts')
+      navigate('/listings')
     } catch (error) {
       throw error
     }

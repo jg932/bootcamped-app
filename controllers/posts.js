@@ -3,7 +3,6 @@ import { Post } from '../models/post.js'
 
 const create = async (req, res) => {
   console.log('creating posts!')
-
   try {
     req.body.added_by = req.user.profile
     const post = await new Post(req.body)
@@ -20,10 +19,9 @@ const create = async (req, res) => {
 
 const index = async (req, res) => {
   console.log('indexing')
-
   try {
     const posts = await Post.find({})
-      .populate('user')
+      // .populate('user')
       .sort({ createdAt: 'desc' })
     return res.status(200).json(posts)
   } catch (error) {
@@ -34,11 +32,10 @@ const index = async (req, res) => {
 
 const show = async (req, res) => {
   console.log('showing detail page')
-
   try {
-    const post = await Post.findById(req.params.id)
-    .populate('user')
-    return res.status(200).json(post)
+    const posts = await Post.findById(req.params.id)
+    // .populate('user')
+    return res.status(200).json(posts)
   } catch (error) {
     return res.status(500).json(error)
   }
