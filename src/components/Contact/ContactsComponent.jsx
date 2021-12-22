@@ -11,7 +11,6 @@ const ContactsCompoment = (props) => {
   const handleCreateContact = async (formData) => {
     try {
       const newContact = await companyService.createContact(props.company._id, formData)
-      // console.log(props.contacts)
       props.setContacts([...props.contacts, newContact])
       console.log(props.contacts)
     } catch (error) {

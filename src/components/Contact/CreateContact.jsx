@@ -15,13 +15,21 @@ const CreateContact = (props) => {
     gaGrad: gaGrad,
     user: props.user.profile
   }
-
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     props.handleCreateContact(formData)
     props.setToggleNew(false)
   }
-  return (
+
+  const handleCheck = e => {
+    const checked = e.target.checked
+    checked
+    ? setGaGrad(true)
+    : setGaGrad(false)
+  }
+
+   return (
     <form className="create-form" onSubmit={handleSubmit}>
       <div className="contact-prompt">
         <label>Enter Contact's Info</label>
@@ -68,7 +76,7 @@ const CreateContact = (props) => {
         type="checkbox"
         name="gaGrad"
         value={gaGrad}
-        onChange={(e) => setGaGrad(e.target.value)}
+        onChange={(e) => handleCheck(e)}
       />
       <div className="border"/>
       <button type="submit">Add Contact</button>
