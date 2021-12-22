@@ -66,6 +66,7 @@ export const getCompanyById = async (companyId) => {
 }
 
 export const createContact = async (postId, contact) => {
+  console.log('creating contact', contact)
   try {
     const res = await fetch(`${BASE_URL}${postId}/contacts`, {
       method: "POST",

@@ -71,13 +71,13 @@ const deleteCompany = async (req, res) => {
 const createContact = async (req, res) => {
   console.log("creating contact")
   try {
-    req.body.contacter = req.user.profile
+    req.body.user = req.user.profile
     const company = await Company.findById(req.params.id)
     company.contacts.push(req.body)
     await company.save()
     const newContact = company.contacts[company.contacts.length - 1]
     const profile = await Profile.findById(req.user.profile)
-    newContact.contacter = profile
+    newContact.user = profile
     return res.status(201).json(newContact)
   } catch (error) {
     return res.status(500).json(error)

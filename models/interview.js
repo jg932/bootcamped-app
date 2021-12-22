@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 
-const interviewSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const interviewSchema = new Schema({
   interviewer:{
     type: String
   },
