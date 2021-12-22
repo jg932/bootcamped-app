@@ -30,20 +30,20 @@ export const createListing = async (listing) => {
 }  
 
 export const updateListing = async (postId, updatedPost) => {
-  try {
-    const res = await fetch(`${BASE_URL}${postId}`, {
-      method: "PUT",
-      headers: {
-        'content-type': 'application/json',
-        'Authorization': 'Bearer ' + tokenService.getToken()
-      },
+//   try {
+//     const res = await fetch(`${BASE_URL}${postId}`, {
+//       method: "PUT",
+//       headers: {
+//         'content-type': 'application/json',
+//         'Authorization': 'Bearer ' + tokenService.getToken()
+//       }
       // body:JSON.stringify(updatedPost)
-    })
-    const data = await res.json()
-    return data
-  } catch (error){
-    throw error
-  }
+//     })
+//     const data = await res.json()
+//     return data
+//   } catch (error){
+//     throw error
+//   }
 }
 
 export const deleteListing = async (postId) => {
