@@ -34,7 +34,7 @@ const show = async (req, res) => {
   console.log('showing detail page')
   try {
     const posts = await Post.findById(req.params.id)
-    .populate('user')
+    // .populate('user')
     return res.status(200).json(posts)
   } catch (error) {
     return res.status(500).json(error)
