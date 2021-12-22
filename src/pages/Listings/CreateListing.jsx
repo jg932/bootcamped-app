@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './Listings.module.css'
+import '../../styles/Listings.css'
 
 //Components
 import ListingForm from './ListingForm.jsx'

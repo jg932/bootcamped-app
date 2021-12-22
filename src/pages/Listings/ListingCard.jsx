@@ -1,4 +1,4 @@
-import './Listings.module.css'
+import '../../styles/Listings.css'
 
 import { Link } from 'react-router-dom'
 
