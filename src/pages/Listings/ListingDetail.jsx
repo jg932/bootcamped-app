@@ -9,7 +9,6 @@ const ListingDetail = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [listing, setListing] = useState()
-
   useEffect(() => {
     const fetchListing = async () => {
       try {
@@ -21,7 +20,7 @@ const ListingDetail = () => {
     }
     fetchListing()
   }, [id])
-  
+  console.log(listing)
   return (
     <div className="layout">
       <Header title={`${listing?.name}`} />
