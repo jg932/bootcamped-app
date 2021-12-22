@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import styles from './Companies.module.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import HiringInfo from './HiringInfo'
 import Header from '../../components/Header'
 import * as companyService from '../../services/companyService'
 import ContactsCompoment from '../../components/Contact/ContactsComponent'
+import "../../styles/Header.css"
 
 const CompanyDetail = (props) => {
   const { id } = useParams()

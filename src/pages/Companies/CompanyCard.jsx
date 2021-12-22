@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from './Companies.module.css'
 import { Link } from 'react-router-dom'
+import "../../styles/Card.css"
 
 const CompanyCard = (props) => {
   console.log(props)
