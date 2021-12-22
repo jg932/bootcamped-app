@@ -1,11 +1,12 @@
 import React from 'react'
+import "../../styles/Card.css"
 
 import ContactDelete from './ContactDelete'
 
 const ContactCard = (props) => {
   return (
     <>
-      <div className="contact-card">
+      <div className="company-card">
         <h2>{props.contact.name}</h2>
         <h3>{props.contact.title}</h3>
         <p>{props.contact.linkedin}</p>
