@@ -18,7 +18,8 @@ const interviewSchema = new Schema({
   },
   techInterview:{
     type: String
-  }
+  },
+  added_by: { type: mongoose.Schema.Types.ObjectId, ref: 'Profile' }
 },
   {timestamps: true }
 )
@@ -41,7 +42,7 @@ const contactSchema = new Schema({
     type: Boolean,
     default: false
   },
-  user:{type: Schema.Types.ObjectId, ref:"User"}
+  added_by: { type: mongoose.Schema.Types.ObjectId, ref: 'Profile' }
 },
   { timestamps: true }
 )
