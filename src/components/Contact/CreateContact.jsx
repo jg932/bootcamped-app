@@ -13,7 +13,7 @@ const CreateContact = (props) => {
     linkedin: linkedin,
     email: email,
     gaGrad: gaGrad,
-    user: props.user
+    user: props.user.profile
   }
 
   const handleSubmit = (e) => {
@@ -35,6 +35,7 @@ const CreateContact = (props) => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
+      <div className="form-border"></div>
       <input
         type="text"
         autoComplete='off'
@@ -43,6 +44,7 @@ const CreateContact = (props) => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
+      <div className="form-border"></div>
       <input
         type="text"
         autoComplete='off'
@@ -51,6 +53,7 @@ const CreateContact = (props) => {
         value={linkedin}
         onChange={(e) => setLinkedin(e.target.value)}
       />
+      <div className="form-border"></div>
       <input
         type="text"
         autoComplete='off'
@@ -59,12 +62,14 @@ const CreateContact = (props) => {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
+      <div className="form-border"></div>
+      <label>GA Grad?</label>
       <input
         type="checkbox"
         name="gaGrad"
         value={gaGrad}
         onChange={(e) => setGaGrad(e.target.value)}
-        />
+      />
       <div className="border"/>
       <button type="submit">Add Contact</button>
 
