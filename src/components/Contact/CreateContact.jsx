@@ -16,9 +16,9 @@ const CreateContact = (props) => {
     user: props.user.profile
   }
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    props.handleCreateContact(formData)
+    await props.handleCreateContact(formData)   
     props.setToggleNew(false)
   }
 

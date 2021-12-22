@@ -10,8 +10,8 @@ const ContactsCompoment = (props) => {
 
   const handleCreateContact = async (formData) => {
     try {
-      const newContact = await companyService.createContact(props.company._id, formData)
-      props.setContacts([...props.contacts, newContact])
+      const updatedCompany = await companyService.createContact(props.company._id, formData)
+      props.handleUpdateCompany(updatedCompany)
     } catch (error) {
       throw error
     }
@@ -43,6 +43,7 @@ const ContactsCompoment = (props) => {
           setToggleNew={setToggleNew}
           handleCreateContact={handleCreateContact}
           handleDeleteContact={handleDeleteContact}
+          handleUpdateCompany={props.handleUpdateCompany}
         />
       }
     </div>
