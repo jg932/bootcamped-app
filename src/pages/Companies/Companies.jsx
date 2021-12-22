@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import styles from './Companies.module.css'
 import CompanyCard from './CompanyCard'
 import Header from '../../components/Header'
 import { getAllCompanies, updateCompany, deleteCompany } from '../../services/companyService'
+import "../../styles/Card.css"
+import "../../styles/Header.css"
 import { Link } from 'react-router-dom'
 
 const Companies = (props) => {

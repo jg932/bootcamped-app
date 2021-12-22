@@ -8,9 +8,8 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav className="nav-bar">
-            Welcome, {user.name}
-           {/* <li><Link to="/profiles">Profiles</Link></li> */}
-            <Link id="logo" to="/companies">Companies</Link>
+            <div id="logo">Welcome, {user.name} </div>
+            <Link to="/companies">Companies</Link>
             <Link to="/listings">Job Listings</Link>
             <Link to="" onClick={handleLogout}>Log Out</Link>
         </nav>

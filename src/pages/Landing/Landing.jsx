@@ -1,7 +1,7 @@
-import styles from './Landing.module.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import * as LottiePlayer from "@lottiefiles/lottie-player";
+import "../../styles/Landing.css"
 
 //Assets
 import Logo from '../../assets/images/logo.jpeg'
