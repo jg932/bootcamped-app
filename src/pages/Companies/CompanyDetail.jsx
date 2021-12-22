@@ -48,7 +48,7 @@ const CompanyDetail = (props) => {
           user={props.user}
           company={company}
           setCompany={setCompany}
-          contacts={company.contacts}
+          contacts={contacts}
           setContacts={setContacts}
         />
       </div>
