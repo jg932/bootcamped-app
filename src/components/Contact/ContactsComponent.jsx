@@ -11,8 +11,9 @@ const ContactsCompoment = (props) => {
   const handleCreateContact = async (formData) => {
     try {
       const newContact = await companyService.createContact(props.company._id, formData)
-      console.log(props.contacts)
+      // console.log(props.contacts)
       props.setContacts([...props.contacts, newContact])
+      console.log(props.contacts)
     } catch (error) {
       throw error
     }
@@ -32,7 +33,7 @@ const ContactsCompoment = (props) => {
       <div className="header">
         <h3>Contacts</h3>
       </div>
-      {/* <ContactList /> */}
+      <ContactList {...props}/>
       <div className="contact-button">
       {props.user &&
             <button onClick={() => setToggleNew(!toggleNew)}>Add a Contact</button>
