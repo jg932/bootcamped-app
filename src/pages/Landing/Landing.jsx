@@ -7,8 +7,9 @@ import * as LottiePlayer from "@lottiefiles/lottie-player";
 import Logo from '../../assets/images/logo.jpeg'
 
 
-const Landing = () => {
+const Landing = ({user}) => {
   return (
+    <>
     <div className="landing-page">
       <div className="landing-elements">
         <img 
@@ -26,12 +27,17 @@ const Landing = () => {
           background="transparent"
           speed="1"
         ></lottie-player>
-        <div className="landing-button-container">
-          <button><Link to="/signup">Sign Up</Link></button>
-          <button><Link to="/signin">Sign In</Link></button>
-        </div>
+        { user ?
+          <div className="border"></div>
+          :
+          <div className="landing-button-container">
+            <button><Link to="/signup">Sign Up</Link></button>
+            <button><Link to="/signin">Sign In</Link></button>
+          </div>
+        }
       </div>
     </div>
+    </>
   )
 }
 
