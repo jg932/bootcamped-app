@@ -77,6 +77,7 @@ export const createContact = async (postId, contact) => {
       body: JSON.stringify(contact)
     })
     const data = await res.json()
+    console.log(data)
     return data
   } catch (error) {
     throw error

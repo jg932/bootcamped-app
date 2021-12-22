@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react'
 import CompanyCard from './CompanyCard'
 import Header from '../../components/Header'
 import { getAllCompanies, updateCompany, deleteCompany } from '../../services/companyService'
+import { Link, useNavigate } from 'react-router-dom'
+import * as companyService from '../../services/companyService'
 import "../../styles/Card.css"
 import "../../styles/Header.css"
-import { Link } from 'react-router-dom'
+
 
 const Companies = (props) => {
   const [companies, setCompanies] = useState([])
+  const navigate = useNavigate()
 
   const handleDeleteCompany = async (companyId) => {
     try {
@@ -18,7 +21,7 @@ const Companies = (props) => {
     }
   }
 
-  useEffect(() => {
+    useEffect(() => {
     const fetchAllCompanies = async () => {
       const companyData = await getAllCompanies()
       setCompanies(companyData)

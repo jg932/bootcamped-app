@@ -10,7 +10,11 @@ const CompanyDetail = (props) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [company, setCompany] = useState()
-  const [contacts, setContacts] = useState([])
+
+  const handleUpdateCompany = updatedCompanyData => {
+    setCompany(updatedCompanyData)
+  }
+
   useEffect(() => {
     const fetchCompany = async () => {
       try {
@@ -48,8 +52,9 @@ const CompanyDetail = (props) => {
           user={props.user}
           company={company}
           setCompany={setCompany}
-          contacts={contacts}
-          setContacts={setContacts}
+          handleUpdateCompany={handleUpdateCompany}
+          // contacts={contacts}
+          // setContacts={setContacts}
         />
       </div>
     </div>
