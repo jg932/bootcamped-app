@@ -20,7 +20,7 @@ const ListingDetail = () => {
     }
     fetchListing()
   }, [id])
-  console.log(listing)
+  
   return (
     <div className="layout">
       <Header title={`${listing?.name}`} />
