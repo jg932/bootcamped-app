@@ -35,9 +35,8 @@ const ListingDetail = (props) => {
   }, [id])
   
   return (
-    <div className="layout">
+    <div className="listing-layout">
       <Header title={`${listing?.name}`} />
-      <div className="border"/>
       <div className="listing-details">
         
         <div className="listing-name">

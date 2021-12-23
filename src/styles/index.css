@@ -28,8 +28,9 @@ code {
   box-sizing: border-box;
 }
 
-.create-container {
-  background: #006ea5;
+.create-company-container {
+  background: lightblue;
+  border: 2px solid #006ea5;
   border-radius: 8px 8px 8px 8px;
   padding-left: 5px;
   padding-bottom: 50px;
@@ -39,8 +40,7 @@ code {
 
 .create-listings-container {
   background-color: lightblue;
-  color: #006ea5;
-  border: 2px #006ea5;
+  border: 2px solid #006ea5;
   border-radius: 8px 8px 8px 8px;
   padding-left: 5px;
   margin-top: 10px;
@@ -76,21 +76,21 @@ code {
   background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
-/* a:link {
-  color: blue;
+a:link {
+  color: #006ea5;
 }
 
 a:visited {
-  color: blue;
+  color: #006ea5;
 }
 
 a:hover {
-  color:red;
+  color:black;
 }
 
 a:active {
-  color: lightblue;
-} */
+  color: #006ea5;
+}
 
 .contact-button {
   padding-top: 8px;

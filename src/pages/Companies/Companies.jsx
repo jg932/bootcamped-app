@@ -33,7 +33,7 @@ const Companies = (props) => {
   return (
     <div className="layout">
       <Header title="All Companies" />
-      <div className="create-container">
+      <div className="create-company-container">
         <Link to="/companies/create"><h3>Add a Company</h3></Link>
       </div>
       {companies?.map((company) => (

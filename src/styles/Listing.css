@@ -4,6 +4,10 @@
   background-color: #006ea5;
 }
 
+h3{
+  color: #006ea5;
+}
+
 textarea {
   color: black;
 }
@@ -11,6 +15,27 @@ textarea {
 input {
   color: black;
   background-color: white;
+}
+
+.listing-layout{
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 10px 10px 10px 35px;
+  padding-left: 5px;
+}
+
+.listing-details{
+  width: 50%;
+  height: 90vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 10px 10px 10px 35px;
+  font-size: x-large;
+  padding-left: 5px;
 }
 
 .post-list {
@@ -26,21 +51,25 @@ input {
   
 }
 
-.card-header {
+.card-header-listing {
+  background-color: #006ea5;
   display: flex;
   align-items: center;
   padding: 5px 0px 0px 5px;
   border-radius: 8px 8px 8px 8px;
-  border: 1px solid #006ea5;
+  border: 1px solid lightblue;
 }
 
+
+
+/* 
 .question-container {
   width: 100%;
   display: flex;
   align-items: flex-start;
   padding: 15px 0px 6px 13px;
-}
-
+} */
+/* 
 .question-container p {
   width: 95%;
   margin: 0;
@@ -48,7 +77,7 @@ input {
   line-height: 1.4;
   font-size: 16px;
   color: rgb(200, 200, 200);
-}
+} */
 
 .code-container {
   padding: 0px 10px 12px 10px;
@@ -82,9 +111,11 @@ input {
   background: none;
   border-radius: 8px;
   margin: 0px 0px 0px 10px ;
-  border: 1px solid #363642;
+  border: 1px solid lightblue;
   color: rgb(190, 190, 190);
   padding: 7px 14px 7px 14px;
+  color: lightblue;
+  background-color: #006ea5;
 }
 
 .comment-section {
