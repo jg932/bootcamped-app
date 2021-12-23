@@ -19,7 +19,7 @@ const Signup = props => {
 
         <div className="form-container">
           <div className="title-container">
-            <h1>Sign Up</h1>
+            <h6>Sign Up</h6>
             <p>{message}</p>
           </div>  
           <SignupForm className="form-container" {...props} updateMessage={updateMessage} />

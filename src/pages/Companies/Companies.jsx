@@ -33,7 +33,6 @@ const Companies = (props) => {
   return (
     <div className="layout">
       <Header title="All Companies" />
-      <div className="border"/>
       <div className="create-container">
         <Link to="/companies/create"><h3>Add a Company</h3></Link>
       </div>
