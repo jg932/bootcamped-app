@@ -35,7 +35,7 @@ As fellow Bootcamp students/grads we know the struggle of going through a Bootca
 
 ## Devs:
   - [Abdul Beidak](https://github.com/Abdul2067)
-  - [Jared Goldstein]()
-  - [Kevin Cabano]()
+  - [Jared Goldstein](https://github.com/jg932)
+  - [Kevin Cabano](https://github.com/kmcabano)
   - [Ja Randle]()
  
