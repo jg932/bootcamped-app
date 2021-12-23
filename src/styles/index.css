@@ -7,7 +7,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
-  background: #05394e;
+  background: lightblue;
 }
 
 code {
@@ -24,6 +24,24 @@ h1, h2, h3 {
 
 * {
   box-sizing: border-box;
+}
+
+.create-container {
+  background-color: black;
+  color: white;
+  border-radius: 8px 8px 8px 8px;
+  padding-left: 5px;
+  padding-top: 6px;
+  margin-top: 6px;
+  height: 35px;
+}
+
+.create-listings-container {
+  background-color: black;
+  color: white;
+  border-radius: 8px 8px 8px 8px;
+  padding-left: 5px;
+  margin-top: 10px;
 }
 
 #root{

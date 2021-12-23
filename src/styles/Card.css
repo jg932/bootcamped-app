@@ -10,6 +10,14 @@
   border-radius: 8px;
 }
 
+.listing-card {
+  color: white;
+  background: #12121b;
+  border: 1px solid #292934;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
 .card-header {
   display: flex;
   align-items: center;

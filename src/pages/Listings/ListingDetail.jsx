@@ -1,10 +1,12 @@
-import '../../styles/Listings.css'
+import '../../styles/Listing.css'
+
 import React, {useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 
 import Header from '../../components/Header'
-import * as listingService from '../../services/listingService'
 import ListingActions from './ListingActions'
+import * as listingService from '../../services/listingService'
+
 
 const ListingDetail = (props) => {
   const { id } = useParams()
@@ -19,18 +21,6 @@ const ListingDetail = (props) => {
       throw error
     }
   }
-
-  // const handleUpdatePost = updatedListingData => {
-  //   listingService.updateListing(updatedListingData)
-  //   .then(updatedListing => {
-  //     const newListingArray = listing?.map(listing =>
-  //       listing._id === updatedListing._id ? updatedListing : listing
-  //       )
-  //       setListing(newListingArray)
-  //       navigate('/')
-  //   })
-  //   }
-
 
   useEffect(() => {
     const fetchListing = async () => {
@@ -49,24 +39,29 @@ const ListingDetail = (props) => {
       <Header title={`${listing?.name}`} />
       <div className="border"/>
       <div className="listing-details">
+        
         <div className="listing-name">
           {listing?.name}
         </div>
+        
         <div className="jobTitle">
           {listing?.jobTitle}
         </div>
+        
         <div className="listing-description">
           {listing?.description}
         </div>
+        
         <div className="listing-footer">
           <ListingActions 
           handleDeletePost={handleDeletePost}
           listing={listing} />
-          </div>
         </div>
+        
+      </div>
     </div>
   )
-  }
+}
 
 
 export default ListingDetail
