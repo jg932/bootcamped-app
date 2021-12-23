@@ -48,7 +48,6 @@ const ContactsCompoment = (props) => {
       }
     </div>
   )
-
 }
 
 export default ContactsCompoment

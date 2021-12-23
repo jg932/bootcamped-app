@@ -4,6 +4,7 @@ import Header from '../../components/Header'
 import * as companyService from '../../services/companyService'
 import ContactsCompoment from '../../components/Contact/ContactsComponent'
 import "../../styles/Header.css"
+import InterviewComponent from '../../components/Interview/InterviewComponent'
 
 const CompanyDetail = (props) => {
   const { id } = useParams()
@@ -42,8 +43,12 @@ const CompanyDetail = (props) => {
       </div>
 
       <div className="interviews">
-        {/* interview process display here */}
-        {/* add interview form here, probably with an if statement to display it? */}
+        <InterviewComponent
+          user={props.user}
+          company={company}
+          setCompany={setCompany}
+          handleUpdateCompany={handleUpdateCompany}
+        />
       </div>
 
       <div className="contacts">
