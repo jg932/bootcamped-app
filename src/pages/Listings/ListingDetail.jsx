@@ -38,17 +38,13 @@ const ListingDetail = (props) => {
     <div className="listing-layout">
       <Header title={`${listing?.name}`} />
       <div className="listing-details">
-        
-        <div className="listing-name">
-          {listing?.name}
-        </div>
-        
+            
         <div className="jobTitle">
           {listing?.jobTitle}
+          <br />
         </div>
-        
         <div className="listing-description">
-          {listing?.description}
+          <p>{listing?.description}</p>
         </div>
         
         <div className="listing-footer">

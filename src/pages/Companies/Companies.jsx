@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import * as companyService from '../../services/companyService'
 import "../../styles/Card.css"
 import "../../styles/Header.css"
+import '../../styles/index.css'
 
 
 const Companies = (props) => {

@@ -29,14 +29,14 @@ const InterviewComponent = (props) => {
   return (
     <div className="interview-section">
       <div className="header">
-        <h3>Interviews</h3>
+        <h3>Hiring/Interview Info</h3>
+        <div className="contact-button">
+          {props.user &&
+            <button onClick={() => setToggleNew(!toggleNew)}>Add a Interview</button>
+          }
+        </div>
       </div>
-      <InterviewList {...props} />
-      <div className="contact-button">
-        {props.user &&
-          <button onClick={() => setToggleNew(!toggleNew)}>Add a Interview</button>
-        }
-      </div>
+        
       { toggleNew &&
         <CreateInterview
           {...props}
@@ -46,6 +46,8 @@ const InterviewComponent = (props) => {
           handleUpdatedCompany={props.handleUpdatedCompany}
         />
       }
+      <InterviewList {...props} />
+      <div />
     </div>
   )
 }

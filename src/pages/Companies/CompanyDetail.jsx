@@ -4,6 +4,7 @@ import Header from '../../components/Header'
 import * as companyService from '../../services/companyService'
 import ContactsCompoment from '../../components/Contact/ContactsComponent'
 import "../../styles/Header.css"
+import "../../styles/Listing.css"
 import InterviewComponent from '../../components/Interview/InterviewComponent'
 
 const CompanyDetail = (props) => {
@@ -31,13 +32,13 @@ const CompanyDetail = (props) => {
       <Header title={`${company?.name}`} />
       <div className="company-details">
         <div className='location'>
-         {company?.location}
+         <h3>{company?.location}</h3>
         </div>
         <div className='website'>
-         <a href={`${company?.website}`} target='_blank' rel='noreferrer'>{company?.website}</a>
+         <a href={`${company?.website}`} target='_blank' rel='noreferrer'>Website</a>
         </div>
         <div className='structure'>
-          <label>Info: <p>{company?.structure}</p></label>
+          <p>{company?.structure}</p>
         </div>
       </div>
 
@@ -49,7 +50,7 @@ const CompanyDetail = (props) => {
           handleUpdateCompany={handleUpdateCompany}
         />
       </div>
-
+      
       <div className="contacts">
         <ContactsCompoment
           user={props.user}
