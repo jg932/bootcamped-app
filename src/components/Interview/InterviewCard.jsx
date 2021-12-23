@@ -5,12 +5,13 @@ const InterviewCard = (props) => {
   return (
     <>
       <div className="company-card">
-        <h2>{props.interview.interviewer}</h2>
-        <h3>{props.interview.communication}</h3>
-        <h4>{props.interview.vibe}</h4>
-        <p>{props.interview.tip}</p>
-        <p>{props.interview.techInterview}</p>
+        <p>Name of interviewer: {props.interview.interviewer}</p>
+        <p>Communication: {props.interview.communication}</p>
+        <p>Overall impression/vibe: {props.interview.vibe}</p>
+        <p>Tips: {props.interview.tip}</p>
+        <p>Technical interview? {props.interview.techInterview}</p>
       </div>
+      <div/>
     </>
   )
 }

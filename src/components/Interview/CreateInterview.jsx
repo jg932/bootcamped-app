@@ -24,29 +24,29 @@ const CreateInterview = (props) => {
 
   return (
     <form className="create-form" onSubmit={handleSubmit}>
-      <div className="interview-prompt">
-        <label>Enter Interviewer Info</label>
-      </div>
+     <label>Interviewed by:</label>
       <input 
         type="text" 
         required
         autoComplete="off"
-        placeholder="Interviewer"
+        placeholder="Interviewer name"
         name="interviewer" 
         value={interviewer}
         onChange={(e) => setInterviewer(e.target.value)}
       />
       <div className="form-border"></div>
+      <label>Communcation?</label>
       <input 
         type="text" 
         required
         autoComplete="off"
-        placeholder="Communication"
+        placeholder="Phone/on-site/Zoom/etc."
         name="communication" 
         value={communication}
         onChange={(e) => setCommunication(e.target.value)}
       />
       <div className="form-border"></div>
+      <label htmlFor="">Overall impression/vibe:</label>
       <input 
         type="text" 
         required
@@ -57,6 +57,7 @@ const CreateInterview = (props) => {
         onChange={(e) => setVibe(e.target.value)}
       />
       <div className="form-border"></div>
+      <label htmlFor="">Tips?</label>
       <input 
         type="text" 
         required
@@ -67,11 +68,12 @@ const CreateInterview = (props) => {
         onChange={(e) => setTip(e.target.value)}
       />
       <div className="form-border"></div>
+      <label htmlFor="">Is there a technical interview?</label>
       <input 
         type="text" 
         required
         autoComplete="off"
-        placeholder="Tech Interview"
+        placeholder="Yes/no, how many, etc."
         name="techInterview" 
         value={techInterview}
         onChange={(e) => setTechInterview(e.target.value)}

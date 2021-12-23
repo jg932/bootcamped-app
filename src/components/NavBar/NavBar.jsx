@@ -10,6 +10,7 @@ const NavBar = ({ user, handleLogout }) => {
     <>
       {user ?
         <nav className="nav-bar">
+            <div id="logo">
             <Link to="/" className="nav-logo">
               <img 
                 src={Logo} 
@@ -17,7 +18,7 @@ const NavBar = ({ user, handleLogout }) => {
                 height="73px"
               ></img>
             </Link>
-            <div id="logo">Welcome, {user.name} </div>
+            </div>
             <Link to="/companies">Companies</Link>
             <Link to="/listings">Job Listings</Link>
             <Link to="" onClick={handleLogout}>Log Out</Link>

@@ -49,13 +49,13 @@ const CompanyForm = (props) => {
     <div className="border"/>
 
     <div className="structure-prompt">
-      <label>Structure</label>
+      <label>Details</label>
     </div>
     <input
       type="text"
       name="structure"
       autoComplete='off'
-      placeholder='Structure'
+      placeholder='Details'
       value={props.structure}
       onChange={(e) => props.setStructure(e.target.value)}
     />

@@ -27,16 +27,18 @@ const ContactsCompoment = (props) => {
   }
 
   return (
+    <>
+    <br />
     <div className="contact-section">
       <div className="header">
         <h3>Contacts</h3>
+        <div className="contact-button">
+        {props.user &&
+              <button onClick={() => setToggleNew(!toggleNew)}>Add a Contact</button>
+            }
+        </div>
       </div>
-      <ContactList {...props}/>
-      <div className="contact-button">
-      {props.user &&
-            <button onClick={() => setToggleNew(!toggleNew)}>Add a Contact</button>
-          }
-      </div>
+      
       { toggleNew &&
         <CreateContact
           {...props}
@@ -46,7 +48,10 @@ const ContactsCompoment = (props) => {
           handleUpdateCompany={props.handleUpdateCompany}
         />
       }
+      <ContactList {...props}/>
+      
     </div>
+    </>
   )
 }
 

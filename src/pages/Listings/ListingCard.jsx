@@ -12,6 +12,7 @@ const ListingCard = (props) => {
       <Link to={`/listings/${props.listing._id}`} >
       <div className="card-header-listing">
         <h1>{props.listing.name}</h1>
+        <h2>{props.listing.jobTitle}</h2>
       </div>
       </Link>
     </div>
