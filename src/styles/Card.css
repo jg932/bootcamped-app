@@ -113,9 +113,10 @@ a:link {
 
 a:visited {
   color: lightblue;
+}
   
 a:link {
-  color: #006ea5;
+    color: #006ea5;
 }
 
 a:visited {
@@ -128,5 +129,4 @@ a:hover {
 
 a:active {
   color: lightblue;
-}
 }
