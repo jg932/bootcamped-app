@@ -40,13 +40,7 @@ code {
 
 .create-listings-container {
   background-color: lightblue;
-<<<<<<< HEAD
   border: 2px solid #006ea5;
-=======
-  color: #006ea5;
-  border: 2px #006ea5;
-  background-color: black;
->>>>>>> main
   border-radius: 8px 8px 8px 8px;
   padding-left: 5px;
   margin-top: 10px;
@@ -82,14 +76,9 @@ code {
   background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
-<<<<<<< HEAD
+
 a:link {
   color: #006ea5;
-=======
-/* a:link {
-a:link {
-  color: blue;
->>>>>>> main
 }
 
 a:visited {
