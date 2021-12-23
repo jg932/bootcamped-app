@@ -13,6 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
             <div id="logo">
             <Link to="/" className="nav-logo">
               <img 
+                className="logo"
                 src={Logo} 
                 alt="bootcamped logo"
                 height="73px"
