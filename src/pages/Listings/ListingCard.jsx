@@ -10,7 +10,7 @@ const ListingCard = (props) => {
   return (
     <div className="listing-card">
       <Link to={`/listings/${props.listing._id}`} >
-      <div className="card-header">
+      <div className="card-header-listing">
         <h1>{props.listing.name}</h1>
       </div>
       </Link>
