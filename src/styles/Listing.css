@@ -2,6 +2,7 @@
 
 .listing-form-container {
   background-color: #006ea5;
+  color: black;
 }
 
 textarea {
@@ -19,11 +20,10 @@ input {
 }
 
 .post-card {
-  background-color: lightblue;
+  background: #12121b;
   border: 1px solid #292934;
   margin-top: 10px;
   border-radius: 8px;
-  
 }
 
 .card-header {

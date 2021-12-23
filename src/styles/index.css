@@ -41,6 +41,7 @@ code {
   background-color: lightblue;
   color: #006ea5;
   border: 2px #006ea5;
+  background-color: black;
   border-radius: 8px 8px 8px 8px;
   padding-left: 5px;
   margin-top: 10px;
@@ -77,6 +78,7 @@ code {
 }
 
 /* a:link {
+a:link {
   color: blue;
 }
 
