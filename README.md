@@ -7,11 +7,12 @@ As fellow Bootcamp students/grads we know the struggle of going through a Bootca
 [Click here for the Trello Planning](https://trello.com/b/dxIyYugI/bootcamped)
 
 ## Screenshots
-<img width="895" alt="readme-home" src="https://user-images.githubusercontent.com/69918842/144271600-2aa29289-4cc1-46be-9421-ab7ad62536a9.png">
 
-<img width="894" alt="readme-travel-detail" src="https://user-images.githubusercontent.com/69918842/144271657-8475f331-067c-4301-8843-ba9afb01abad.png">
+<img width="1088" alt="Landing Page" src="https://user-images.githubusercontent.com/69918842/147252462-809d4340-5841-4d09-a7fa-db9d5168f655.png">
 
-<img width="895" alt="readme-add-travel" src="https://user-images.githubusercontent.com/69918842/144271675-0cc5beba-9109-4aa7-a99b-38f97c16d742.png">
+<img width="1093" alt="Index" src="https://user-images.githubusercontent.com/69918842/147252469-718e9b99-b56d-4fe0-9146-37c90246d2e2.png">
+
+<img width="1094" alt="Details" src="https://user-images.githubusercontent.com/69918842/147252484-a120d6d4-678d-4a19-926d-9602f79019e4.png">
 
 ## Technologies used:
   - HTML
