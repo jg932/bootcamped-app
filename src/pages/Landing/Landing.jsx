@@ -25,7 +25,7 @@ const Landing = ({user}) => {
           :
           <div className="landing-button-container">
             <button><Link to="/signup">Sign Up</Link></button>
-            <button><Link to="/signin">Sign In</Link></button>
+            <button><Link to="/login">Log In</Link></button>
           </div>
         }
       </div>

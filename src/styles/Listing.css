@@ -1,7 +1,7 @@
 /* [CSS here] */
 
 .listing-form-container {
-  color: black;
+  background-color: #006ea5;
 }
 
 textarea {
@@ -19,16 +19,19 @@ input {
 }
 
 .post-card {
-  background: #12121b;
+  background-color: lightblue;
   border: 1px solid #292934;
   margin-top: 10px;
   border-radius: 8px;
+  
 }
 
 .card-header {
   display: flex;
   align-items: center;
   padding: 5px 0px 0px 5px;
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #006ea5;
 }
 
 .question-container {
@@ -110,4 +113,20 @@ input {
 
 .comment-link a {
   text-decoration: none;
+}
+
+a:link {
+  color: lightblue;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color:black;
+}
+
+a:active {
+  color: lightblue;
 }
