@@ -38,6 +38,9 @@ code {
 }
 
 .create-listings-container {
+  background-color: lightblue;
+  color: #006ea5;
+  border: 2px #006ea5;
   background-color: black;
   border-radius: 8px 8px 8px 8px;
   padding-left: 5px;
@@ -62,6 +65,7 @@ code {
   position: relative;
   flex-direction: column;
   margin: 10px 10px 10px 35px;
+  
 }
 
 .spacing-block {
@@ -73,6 +77,7 @@ code {
   background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
 }
 
+/* a:link {
 a:link {
   color: blue;
 }
@@ -87,4 +92,12 @@ a:hover {
 
 a:active {
   color: lightblue;
+} */
+
+.contact-button {
+  padding-top: 8px;
+}
+
+.company-detail {
+  background-color: red;
 }

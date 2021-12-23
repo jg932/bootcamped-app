@@ -1,6 +1,7 @@
 /* [CSS here] */
 
 .listing-form-container {
+  background-color: #006ea5;
   color: black;
 }
 
@@ -29,6 +30,8 @@ input {
   display: flex;
   align-items: center;
   padding: 5px 0px 0px 5px;
+  border-radius: 8px 8px 8px 8px;
+  border: 1px solid #006ea5;
 }
 
 .question-container {
@@ -110,4 +113,20 @@ input {
 
 .comment-link a {
   text-decoration: none;
+}
+
+a:link {
+  color: lightblue;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color:black;
+}
+
+a:active {
+  color: lightblue;
 }
