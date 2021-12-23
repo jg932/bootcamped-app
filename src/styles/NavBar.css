@@ -40,6 +40,7 @@
 #logo img {
   margin-right: auto;
   margin-right: 8px;
+  margin-left: -50px;
 }
 
 a:link {
