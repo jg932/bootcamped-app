@@ -29,7 +29,6 @@ const CompanyDetail = (props) => {
   return (
     <div className="layout">
       <Header title={`${company?.name}`} />
-      <div className="border"/>
       <div className="company-details">
         <div className='location'>
          {company?.location}

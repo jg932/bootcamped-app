@@ -3,3 +3,11 @@
   align-items: center;
   flex-direction: column;
 }
+
+button {
+  border-radius: 8px 8px 8px 8px;
+  background-color: lightblue;
+  border: 2px solid #006ea5;
+  color: #006ea5;
+}
+

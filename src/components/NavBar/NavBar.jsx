@@ -25,17 +25,13 @@ const NavBar = ({ user, handleLogout }) => {
       :
         <nav className="nav-bar">
           <Link to="/" className="nav-logo">
-              <img 
-                src={Logo} 
-                alt="bootcamped logo"
-                height="76px"
-              ></img>
-            </Link>
-          <ul>
-            <li><Link to="/listings">Job Listings</Link></li>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-          </ul>
+            <img 
+              src={Logo} 
+              alt="bootcamped logo"
+              height="76px"
+            ></img>
+          </Link>
+          <Link to="/listings">Job Listings</Link>
         </nav>
       }
     </>

@@ -6,6 +6,7 @@
   justify-content: flex-end;
   padding: 10px 35px 10px 35px;
   border-bottom: 1px solid #292934;
+  color: lightblue;
   /* color: white */
 }
 
@@ -30,7 +31,7 @@
 }
 
 #logo h3 {
-  color: black;
+  color: lightblue;
   font-size: 22px;
   font-weight: bold;
   font-family: 'DM Sans', sans-serif;
@@ -38,6 +39,8 @@
 
 #logo img {
   height: 24px;
+  /* margin-right: 8px; */
+  margin-right: auto;
   margin-right: 8px;
 }
 

@@ -12,6 +12,7 @@
 
 .listing-card {
   color: white;
+  background-color: lightblue;
   background: #12121b;
   border: 1px solid #292934;
   margin-top: 10px;
@@ -106,6 +107,12 @@
   color:black;
 }
 
+a:link {
+  color: lightblue;
+}
+
+a:visited {
+  color: lightblue;
 /* a:link {
   color: #006ea5;
 }
@@ -120,4 +127,5 @@ a:hover {
 
 a:active {
   color: lightblue;
+}
 } */
