@@ -1,6 +1,6 @@
 # Bootcamped
 
-As fellow Bootcamp students/grads we know the struggle of going through a Bootcamp, we know about all the information and course work that is being thrown your way, on top of all that right there in the back of your mind, throughout the entire course you're worried about find a job well worry no more. We have created the ultimate resource, our application has everything you will need to make your job search worries disappear.
+As fellow Bootcamp students/grads we know the struggle of going through a Bootcamp, we know about all the information and course work that is being thrown your way, on top of all that right there in the back of your mind, throughout the entire course you're worried about finding a job. We have created the ultimate resource, our application has everything you will need to make your job search worries disappear.
 
 [Check out Bootcamped!!](https://boot-camped.herokuapp.com/)
 
