@@ -10,6 +10,14 @@
   border-radius: 8px;
 }
 
+.listing-card {
+  color: white;
+  background: #12121b;
+  border: 1px solid #292934;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
 .card-header {
   display: flex;
   align-items: center;
@@ -83,7 +91,7 @@
 .company-card {
   margin-top: 10px;
   border-radius: 8px;
-  background: #12121b;
+  background: #006ea5;
   border: 1px solid #292934;
   padding-bottom: 16px;
 }
@@ -95,4 +103,21 @@
 
 .company-link a {
   text-decoration: none;
+  color:black;
 }
+
+/* a:link {
+  color: #006ea5;
+}
+
+a:visited {
+  color: #006ea5;
+}
+
+a:hover {
+  color:black;
+}
+
+a:active {
+  color: lightblue;
+} */

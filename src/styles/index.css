@@ -7,7 +7,7 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   font-family: 'Roboto', sans-serif;
-  background: #05394e;
+  background: lightblue;
 }
 
 code {
@@ -15,15 +15,33 @@ code {
     monospace;
 }
 
-h1, h2, h3 {
+/* h1, h2, h3 {
   margin: 0;
   color: rgb(235, 235, 235);
-}
+} */
+
+
 
 /* INITIAL APP CSS */
 
 * {
   box-sizing: border-box;
+}
+
+.create-container {
+  background: #006ea5;
+  border-radius: 8px 8px 8px 8px;
+  padding-left: 5px;
+  padding-bottom: 50px;
+  margin-top: 10px;
+  height: 35px;
+}
+
+.create-listings-container {
+  background-color: black;
+  border-radius: 8px 8px 8px 8px;
+  padding-left: 5px;
+  margin-top: 10px;
 }
 
 #root{
@@ -53,4 +71,20 @@ h1, h2, h3 {
 .layout::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* Disable scrollbar Chrome/Safari/Webkit */
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color:red;
+}
+
+a:active {
+  color: lightblue;
 }

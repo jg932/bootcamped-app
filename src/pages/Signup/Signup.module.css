@@ -4,8 +4,9 @@
   flex-direction: column;
 } */
 
-h1 {
+h6 {
   color: red;
+  font-size: 30px;
 }
 
 .signup-page{
@@ -31,6 +32,7 @@ h1 {
 }
 
 .title-container{
+  h1: black;
   display: flex;
   flex-direction: column;
   width: 100%;

@@ -1,4 +1,5 @@
-import './Listings.module.css'
+import '../../styles/Listing.css'
+import '../../styles/index.css'
 
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -6,6 +7,7 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/Header.jsx'
 import ListingCard from './ListingCard'
 import { getAllPosts, updateListing, deleteListing } from '../../services/listingService'
+
 
 const Listing = (props) => {
   const [listings, setListings] = useState([])
@@ -24,15 +26,19 @@ const Listing = (props) => {
     <>
       <div className="layout">
         <Header title = "Job Posts"/>
-        <div className="border"/>
-        <Link to="/listings/create">Create new listing</Link>
+
+        <div className="create-listings-container">
+          <Link to="/listings/create"><h3>Create new listing</h3></Link>
+        </div>
+
         {listings?.map((listing) => (
+          
         <ListingCard
           listing={listing}
           key={listing._id}
           user={props.user}
-          // handleDeletePost={handleDeletePost}
         />
+      
       ))}
       </div>
     </>

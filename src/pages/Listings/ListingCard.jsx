@@ -1,7 +1,8 @@
-import styles from './Listings.module.css'
+import '../../styles/Listing.css'
+import '../../styles/Card.css'
+import '../../styles/index.css'
 
 import { Link } from 'react-router-dom'
-import * as ListingActions from './ListingActions'
 
 
 const ListingCard = (props) => {
@@ -10,7 +11,7 @@ const ListingCard = (props) => {
     <div className="listing-card">
       <Link to={`/listings/${props.listing._id}`} >
       <div className="card-header">
-        {props.listing.name}
+        <h1>{props.listing.name}</h1>
       </div>
       </Link>
     </div>

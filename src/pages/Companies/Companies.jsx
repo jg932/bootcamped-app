@@ -33,8 +33,9 @@ const Companies = (props) => {
   return (
     <div className="layout">
       <Header title="All Companies" />
-      <div className="border"/>
-      <Link to="/companies/create">Add a Company</Link>
+      <div className="create-container">
+        <Link to="/companies/create"><h3>Add a Company</h3></Link>
+      </div>
       {companies?.map((company) => (
           <CompanyCard
             company={company}

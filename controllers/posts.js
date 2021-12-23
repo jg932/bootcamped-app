@@ -42,14 +42,12 @@ const show = async (req, res) => {
 }
 
 const update = async (req, res) => {
-  console.log('updating data')
+  console.log('updating data', req.body)
 
   try {
-    await Post.findByIdAndDelete(req.params.id)
-    const profile = await Profile.findById(res.user.profile)
-    profile.posts.remove({ _id: req.params.id })
-    await profile.save()
-    return res.status (204).end()
+    const post = await Post.findByIdAndUpdate(req.params.id, req.body, {new:true})
+    console.log(post)
+    return res.status(204).end()
   } catch (error) {
     return res.status(500).json(error)
   }
